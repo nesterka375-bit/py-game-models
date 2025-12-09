@@ -16,7 +16,6 @@ def main() -> None:
         for skill_detail in details["race"]["skills"]:
             Skill.objects.get_or_create(
                 name=skill_detail["name"],
-                race=race_obj,
                 defaults={"bonus": skill_detail["bonus"]}
             )
 
